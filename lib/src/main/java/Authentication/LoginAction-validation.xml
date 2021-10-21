@@ -1,0 +1,24 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+ 
+  <field name="mobile">  
+           
+          <field-validator type="stringlength">  
+          <param name="minLength">10</param>  
+          <param name="maxLength">10</param>  
+          <param name="trim">true</param>  
+          <message>enter valid 10 digit PhoneNO</message>         
+       </field-validator>  
+       <field-validator type="requiredstring"> 
+               <message>You cannot leave the phone empty.</message> 
+           </field-validator>
+    </field>
+    
+  <field name="password">
+      <field-validator type="requiredstring">
+        <message key="password.required" />
+      </field-validator>
+     
+    </field> 
+ </validators>

@@ -1,0 +1,48 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+  <field name="name">
+      <field-validator type="requiredstring">
+          <message>User Name is required.</message>
+      </field-validator>
+  </field>
+  
+  <field name="password">
+      <field-validator type="requiredstring">
+        <message key="password.required" />
+      </field-validator>
+      <field-validator type="stringlength">  
+          <param name="minLength">6</param>  
+         
+          <message>Password must be greater than 6 characters </message>         
+       </field-validator>  
+    </field> 
+      
+      
+  <field name="email"> 
+    
+    <field-validator type="email"> 
+        <message>The email address you entered is not valid.</message> 
+    </field-validator> 
+    <field-validator type="requiredstring"> 
+             <message>You cannot leave the email address field empty.</message> 
+           </field-validator>
+</field>
+
+
+    <field name="mobile">  
+           
+          <field-validator type="stringlength">  
+          <param name="minLength">10</param>  
+          <param name="maxLength">10</param>  
+          <param name="trim">true</param>  
+          <message>enter valid 10 digit PhoneNO</message>         
+       </field-validator>  
+       <field-validator type="requiredstring"> 
+               <message>You cannot leave the phone empty.</message> 
+           </field-validator>
+    </field>
+  
+</validators>
+
+ 

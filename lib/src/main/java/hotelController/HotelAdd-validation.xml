@@ -1,0 +1,58 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+
+
+
+	<field name="hotelName">
+		<field-validator type="requiredstring">
+			<message>hotel Name is required</message>
+		</field-validator>
+	</field>
+
+	<field name="city">
+		<field-validator type="requiredstring">
+			<message> City is required</message>
+		</field-validator>
+
+	</field>
+
+	<field name="wifi">
+		<field-validator type="requiredstring">
+			<message> wifi is required</message>
+		</field-validator>
+	</field>
+
+	<field name="dinner">
+		<field-validator type="requiredstring">
+			<message>dinner is required</message>
+		</field-validator>
+	</field>
+
+	<field name="lunch">
+		<field-validator type="requiredstring">
+			<message>lunch is required</message>
+		</field-validator>
+	</field>
+
+	<field name="breakfast">
+		<field-validator type="requiredstring">
+			<message>breakfast is required</message>
+		</field-validator>
+	</field>
+
+	<field name="Rooms">
+		<field-validator type="requiredstring">
+			<message>rooms is required</message>
+		</field-validator>
+
+	</field>
+
+	<field name="Price">
+		<field-validator type="requiredstring">
+			<message>price is required</message>
+		</field-validator>
+	</field>
+</validators>
+
+ 

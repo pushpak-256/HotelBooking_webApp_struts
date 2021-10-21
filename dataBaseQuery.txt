@@ -1,0 +1,33 @@
+create database hotel;
+
+ CREATE TABLE `register` (
+  `name` varchar(30) DEFAULT NULL,
+  `password` varchar(30) DEFAULT NULL,
+  `mobile` varchar(15) NOT NULL,
+  `email` varchar(40) DEFAULT NULL,
+  `admin` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`mobile`)
+);
+
+
+CREATE TABLE `hotels_list` (
+  `hotelName` varchar(20) DEFAULT NULL,
+  `city` varchar(20) DEFAULT NULL,
+  `wifi` varchar(20) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `dinner` varchar(10) DEFAULT NULL,
+  `lunch` varchar(10) DEFAULT NULL,
+  `brakfast` varchar(10) DEFAULT NULL,
+  `rooms` int DEFAULT NULL,
+  `hotelNo` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`hotelNo`)
+);
+
+
+ CREATE TABLE `bookedhotels` (
+  `name` varchar(30) DEFAULT NULL,
+  `mobile` varchar(30) DEFAULT NULL,
+  `hotelName` varchar(30) DEFAULT NULL,
+  `city` varchar(30) DEFAULT NULL,
+  `hotelNO` int DEFAULT NULL
+)

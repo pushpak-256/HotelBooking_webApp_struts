@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    
+  <!--  namespace="/tuts" -->
+<include file="Authentication.xml"/>
+
+<package name="basicstruts2"  extends="struts-default">
+  </package>
+
+<package name="hotelController"  extends="struts-default">
+  
+ <action name="searchHotels" class="booking.SearchAction">
+			<result name="error">WEB-INF/error.jsp</result>
+			<result name="input">searchHotels.jsp</result>
+			<result name="success">WEB-INF/searchResult.jsp</result>
+		</action>
+		
+    <action name="addHotel" class="hotelController.HotelAdd">
+			<result name="error">WEB-INF/adminError.jsp</result>
+			<result name="input">addHotel.jsp</result>
+			<result name="success">WEB-INF/hotelAdditionSuccess.jsp</result>
+		</action>
+   
+   <action name="removeHotel" class="hotelController.RemoveHotel">
+			<result name="error">WEB-INF/adminError.jsp</result>
+			<result name="input">removeHotel.jsp</result>
+			<result name="success">WEB-INF/removedHotel.jsp</result>
+		</action>
+    
+     <action name="book*" class="booking.BookAction">
+			
+			<result name="BOOKED">WEB-INF/receipt.jsp</result>
+			<result name="error">WEB-INF/adminError.jsp</result>
+		</action>
+   
+</package>
+    
+</struts>
